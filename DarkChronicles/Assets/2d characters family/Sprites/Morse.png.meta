@@ -1,22 +1,69 @@
 fileFormatVersion: 2
 guid: d011b984663be154db988a9ca0eaf6cc
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: NPC1 (1)_0
-    21300002: NPC1 (1)_1
-    21300004: NPC1 (1)_2
-    21300006: NPC1 (1)_3
-    21300008: NPC1 (1)_4
-    21300010: NPC1 (1)_5
-    21300012: NPC1 (1)_6
-    21300014: NPC1 (1)_7
-    21300016: NPC1 (1)_8
-    21300018: NPC1 (1)_9
-    21300020: NPC1 (1)_10
-    21300022: NPC1 (1)_11
-    21300024: NPC1 (1)_12
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: NPC1 (1)_0
+  - first:
+      213: 21300002
+    second: NPC1 (1)_1
+  - first:
+      213: 21300004
+    second: NPC1 (1)_2
+  - first:
+      213: 21300006
+    second: NPC1 (1)_3
+  - first:
+      213: 21300008
+    second: NPC1 (1)_4
+  - first:
+      213: 21300010
+    second: NPC1 (1)_5
+  - first:
+      213: 21300012
+    second: NPC1 (1)_6
+  - first:
+      213: 21300014
+    second: NPC1 (1)_7
+  - first:
+      213: 21300016
+    second: NPC1 (1)_8
+  - first:
+      213: 21300018
+    second: NPC1 (1)_9
+  - first:
+      213: 21300020
+    second: NPC1 (1)_10
+  - first:
+      213: 21300022
+    second: NPC1 (1)_11
+  - first:
+      213: 21300024
+    second: NPC1 (1)_12
+  - first:
+      213: 8943450210212800536
+    second: Morse_0
+  - first:
+      213: -623877327038670872
+    second: Morse_1
+  - first:
+      213: 5165201860346394016
+    second: Morse_2
+  - first:
+      213: 8306354481605217598
+    second: Morse_3
+  - first:
+      213: 1626436714108143193
+    second: Morse_4
+  - first:
+      213: 650293743108137923
+    second: Morse_5
+  - first:
+      213: -316131870344319986
+    second: Morse_6
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -71,7 +118,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -82,7 +129,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -93,17 +141,18 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC1 (1)_0
+      name: Morse_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 576
-        width: 192
-        height: 192
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,19 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a89281ef7313c094f8d093b824403041
+      spriteID: 2fde9da43947bbc4fa630c7d53e5aaca
+      internalID: 8943450210212800536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC1 (1)_1
+      name: Morse_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 576
-        width: 192
-        height: 192
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,19 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdf47e4daa817cf4dbee870b12c048c8
+      spriteID: a2b73a3e9b3c456448e766db707990f6
+      internalID: -623877327038670872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC1 (1)_2
+      name: Morse_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 576
-        width: 192
-        height: 192
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,39 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a18ed185a792de04b875c48ef7b115f2
+      spriteID: e839e3224a21e1149afbc1381fca8fbc
+      internalID: 5165201860346394016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC1 (1)_3
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 576
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec02f65dd79738b47828704a604c6f3d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC1 (1)_4
+      name: Morse_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 192
-        height: 192
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,19 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f3ab367dda726842a5ce2569c97ad7c
+      spriteID: e16d1b6e27e288e449a3f40dd223ac4c
+      internalID: 8306354481605217598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC1 (1)_5
+      name: Morse_4
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
-        width: 192
-        height: 192
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,19 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 229eb49ce93998741a39bf1b5117963e
+      spriteID: 0906e0be8e065354481be71093b4956a
+      internalID: 1626436714108143193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC1 (1)_6
+      name: Morse_5
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
-        width: 192
-        height: 192
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,119 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e31ebe8cb2372994ba92f41680ec21ad
+      spriteID: fbed9db75ce0b554c9980afd4db95a54
+      internalID: 650293743108137923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC1 (1)_7
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 384
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 943773358abc3c142b67b70b411a39e2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC1 (1)_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c624b8ce3d0a15c479850e6c7b4974ba
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC1 (1)_9
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cced2eaba14cc0b4dbbb8957470fc8c4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC1 (1)_10
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a50b7e50929177340a7503a239d8b6be
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC1 (1)_11
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 192
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73ad4fc4f2465ee4aa86bac2ce88ff36
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC1 (1)_12
+      name: Morse_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 192
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,7 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44c88271369742048ab01e4be97afe87
+      spriteID: 65a6205b43119eb49a9c985a20c9fd76
+      internalID: -316131870344319986
       vertices: []
       indices: 
       edges: []
@@ -360,10 +296,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 6216a26afcdcc9543811e735650ad0eb
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

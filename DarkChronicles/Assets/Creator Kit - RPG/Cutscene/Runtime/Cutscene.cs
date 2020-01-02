@@ -94,7 +94,7 @@ namespace RPGM.Gameplay
         {
 
             if (audioClip != null)
-                model.musicController.CrossFade(audioClip);
+                //model.musicController.CrossFade(audioClip);
 
             material.SetTexture("_ScreenTex", game);
 

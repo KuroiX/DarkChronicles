@@ -49,7 +49,7 @@ namespace RPGM.Core
         /// <returns>The event.</returns>
         /// <param name="tick">Tick.</param>
         /// <typeparam name="T">The event type parameter.</typeparam>
-        static public T Add<T>(float tick = 0) where T : Event, new()
+        public static T Add<T>(float tick = 0) where T : Event, new()
         {
             var ev = New<T>();
             ev.tick = Time.time + tick;
@@ -63,7 +63,7 @@ namespace RPGM.Core
         /// <returns>The event.</returns>
         /// <param name="tick">Tick.</param>
         /// <typeparam name="T">The event type parameter.</typeparam>
-        static public T Add<T>(T ev, float tick) where T : Event, new()
+        public static T Add<T>(T ev, float tick) where T : Event, new()
         {
             ev.tick = Time.time + tick;
             eventQueue.Push(ev);
