@@ -14,7 +14,7 @@ public class CutScene : MonoBehaviour
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
     
     [SerializeField]
-    private CutSceneEvent[] events;
+    private ScriptableCutScene[] events;
 
     private Queue<CutSceneEvent> _eventQueue;
     private Queue<string> _sentences;
@@ -23,7 +23,6 @@ public class CutScene : MonoBehaviour
 
     private bool _textLocked;
     private bool _isRunning;
-    private bool _sequenceLocked;
     private bool _activated;
 
     #region MonoBehaviour
@@ -44,19 +43,9 @@ public class CutScene : MonoBehaviour
     
     void Update()
     {
-        if (_activated && Input.anyKeyDown)
+        if (_activated && _textLocked && Input.anyKeyDown)
         {
-            //Debug.Log(_textLocked + " " + _sequenceLocked);
-            
-            if (_textLocked)
-            {
-                DisplayNextSentence();
-            }
-            else if (!_sequenceLocked)
-            {
-                // next sequence
-                Next();
-            }
+            DisplayNextSentence();
         }
     }
     
@@ -80,7 +69,15 @@ public class CutScene : MonoBehaviour
         // Enqueue events
         for (int i = 0; i < events.Length; i++)
         {
-            _eventQueue.Enqueue(events[i]);
+            for (int j = 0; j < events[i].playables.Length; j++)
+            {
+                _eventQueue.Enqueue(new CutSceneEvent(events[i].playables[j]));
+            }
+            
+            for (int j = 0; j < events[i].dialogues.Length; j++)
+            {
+                _eventQueue.Enqueue(new CutSceneEvent(events[i].dialogues[j]));
+            }
         }
         
         // Call first event
@@ -99,11 +96,11 @@ public class CutScene : MonoBehaviour
         
         var nextEvent = _eventQueue.Dequeue();
         
-        if (nextEvent.type == CutSceneEvent.EventType.Animation)
+        if (nextEvent.type == CutSceneEvent.EventType.Playable)
         {
             StartCoroutine(PlaySequence(nextEvent));
         } 
-        else if (nextEvent.type == CutSceneEvent.EventType.Text)
+        else if (nextEvent.type == CutSceneEvent.EventType.Dialogue)
         {
             StartDialogue(nextEvent);
         }
@@ -113,13 +110,11 @@ public class CutScene : MonoBehaviour
     IEnumerator PlaySequence(CutSceneEvent _event)
     {
         //Debug.Log("PlaySequence");
-        _sequenceLocked = true;
-        _director.Play(_event.animation);
+        
+        _director.Play(_event.playable);
 
-        yield return new WaitForSeconds((float) _event.animation.duration);
-        
-        _sequenceLocked = false;
-        
+        yield return new WaitForSeconds((float) _event.playable.duration);
+
         Next();
     }
     
