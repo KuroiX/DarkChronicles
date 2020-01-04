@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -147,5 +148,4 @@ MonoBehaviour:
   events:
   - type: 0
     dialogue: {fileID: 11400000, guid: 5364af25a33286b45ad1f5447a7735c6, type: 2}
-    animation: {fileID: 0}
-    connected: 0
+    animation: {fileID: 11400000, guid: 3595ca8c29a6f9a4ab56d48b9ac20043, type: 2}

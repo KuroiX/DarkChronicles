@@ -17,6 +17,4 @@ public class CutSceneEvent
     public Dialogue dialogue;
     public TimelineAsset animation;
     
-    [HideInInspector]
-    public bool connected;
 }
