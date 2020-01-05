@@ -13,9 +13,11 @@ public class CutScene : MonoBehaviour
     private Animator _animator;
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
     
+    [SerializeField] 
+    private GameObject nextCutscene;
     [SerializeField]
     private ScriptableCutScene[] events;
-
+    
     private Queue<CutSceneEvent> _eventQueue;
     private Queue<string> _sentences;
     private PlayableDirector _director;
@@ -38,7 +40,7 @@ public class CutScene : MonoBehaviour
     {
         //Debug.Log("CutScene.OnTriggerEnter2D()");
         if (!_activated)
-            Setup();
+            Setup(col);
     }
     
     void Update()
@@ -53,7 +55,7 @@ public class CutScene : MonoBehaviour
     
     #region Events
     
-    private void Setup()
+    private void Setup(Collider2D col)
     {
         // Initialize
         _eventQueue = new Queue<CutSceneEvent>();
@@ -81,6 +83,24 @@ public class CutScene : MonoBehaviour
         }
         
         // Call first event
+        //Next();
+        StartCoroutine(MovePlayer(col));
+    }
+
+    IEnumerator MovePlayer(Collider2D col)
+    {
+        //TODO: walking animation
+        
+        Vector3 scenePos = transform.position;
+        Vector3 distance = col.transform.position - scenePos;
+        
+        while (distance.magnitude > 0.05f)
+        {
+            col.transform.position = Vector3.Lerp(col.transform.position, scenePos, 0.15f);
+            yield return null;
+            distance = col.transform.position - scenePos;
+        }
+
         Next();
     }
 
@@ -122,7 +142,16 @@ public class CutScene : MonoBehaviour
     {
         _charController.enabled = true;
         _activated = false;
+        ActivateNextCutscene();
         Destroy(gameObject);
+    }
+
+    private void ActivateNextCutscene()
+    {
+        if (!nextCutscene.Equals(null))
+        {
+            nextCutscene.SetActive(true);
+        }
     }
 
     #endregion
@@ -153,7 +182,7 @@ public class CutScene : MonoBehaviour
         {
             if (_sentences.Count == 0)
             {
-                EndDialogue();
+                StartCoroutine(EndDialogue());
                 return;
             }
 
@@ -177,9 +206,10 @@ public class CutScene : MonoBehaviour
         _isRunning = false;
     }
 
-    private void EndDialogue()
+    IEnumerator EndDialogue()
     {
         _animator.SetBool(IsOpen, false);
+        yield return new WaitForSeconds(0.2f);
         _textLocked = false;
         Next();
     }

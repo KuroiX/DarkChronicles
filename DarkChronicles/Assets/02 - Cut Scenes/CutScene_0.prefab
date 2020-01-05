@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 608279067470060620}
   - component: {fileID: 608279067470060621}
   m_Layer: 0
-  m_Name: Timeline
+  m_Name: CutScene_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &608279067470060619
 Transform:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 0}
   m_InitialState: 0
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329069b231ab9104eb27b3af2b2a9e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextCutscene: {fileID: 0}
   events:
-  - type: 0
-    dialogue: {fileID: 11400000, guid: 5364af25a33286b45ad1f5447a7735c6, type: 2}
-    animation: {fileID: 11400000, guid: 3595ca8c29a6f9a4ab56d48b9ac20043, type: 2}
+  - playables: []
+    dialogues: []
