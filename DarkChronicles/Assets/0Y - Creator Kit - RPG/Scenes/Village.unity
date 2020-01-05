@@ -978,12 +978,12 @@ PrefabInstance:
     - target: {fileID: 3273605809934700986, guid: 1c14ebde4b5e54881a67b686f46e6b1d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.43
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3273605809934700986, guid: 1c14ebde4b5e54881a67b686f46e6b1d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.22
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3273605809934700986, guid: 1c14ebde4b5e54881a67b686f46e6b1d,
         type: 3}
@@ -1474,7 +1474,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayableAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 489bb58dd852d8246a7c3632a31621c7,
+      objectReference: {fileID: 11400000, guid: ce9aa7aad43061a4d8790d646ae59b11,
         type: 2}
     - target: {fileID: 608279067470060620, guid: d8e9241a432179240ab02a3395a56bd0,
         type: 3}
@@ -2792,7 +2792,7 @@ PrefabInstance:
     - target: {fileID: 608279067470060622, guid: d8e9241a432179240ab02a3395a56bd0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8e9241a432179240ab02a3395a56bd0, type: 3}
@@ -3841,6 +3841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3061224
+      objectReference: {fileID: 0}
+    - target: {fileID: 592604540319452852, guid: 540e6dd1b10c21140b7dec2c5df4b456,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 592604540319452853, guid: 540e6dd1b10c21140b7dec2c5df4b456,
         type: 3}
@@ -76671,6 +76676,11 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.3061224
       objectReference: {fileID: 0}
+    - target: {fileID: 592604540319452852, guid: 540e6dd1b10c21140b7dec2c5df4b456,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 592604540319452853, guid: 540e6dd1b10c21140b7dec2c5df4b456,
         type: 3}
       propertyPath: m_Controller
@@ -78936,7 +78946,7 @@ PrefabInstance:
     - target: {fileID: 608279067470060622, guid: d8e9241a432179240ab02a3395a56bd0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8e9241a432179240ab02a3395a56bd0, type: 3}
@@ -81089,12 +81099,12 @@ PrefabInstance:
     - target: {fileID: 8171158353334016013, guid: 84535a21e4ab6412690b5fa8acc3908e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.48
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8171158353334016013, guid: 84535a21e4ab6412690b5fa8acc3908e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.709999
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8171158353334016013, guid: 84535a21e4ab6412690b5fa8acc3908e,
         type: 3}
