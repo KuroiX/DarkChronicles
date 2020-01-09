@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject player;
-    public float cooldown;
+    
+    [FormerlySerializedAs("cooldown")] public float projectileCD;
     public float projectileSpeed;
     public float offset;
+    public float projectileLifespan;
     
-    private float remainingCooldown;
+    private float projectileCooldown;
+    private float basicAttackCooldown;
 
     // Start is called before the first frame update
     void Start()
@@ -24,19 +28,19 @@ public class PlayerShooting : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
 
-        if (remainingCooldown <= 0)
+        if (projectileCooldown <= 0)
         {
             if (Input.GetMouseButton(0))
             {
                 float distance = difference.magnitude;
                 Vector2 direction = difference / distance;
                 sendProjectile(direction.normalized, rotationZ);
-                remainingCooldown = cooldown;
+                projectileCooldown = projectileCD;
             }
         }
         else
         {
-            remainingCooldown -= Time.deltaTime;
+            projectileCooldown -= Time.deltaTime;
         }
     }
 
@@ -46,5 +50,11 @@ public class PlayerShooting : MonoBehaviour
         p.transform.position = player.transform.position;
         p.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + offset);
         p.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
+        Destroy(p, projectileLifespan);
+    }
+
+    void basicAttack()
+    {
+        
     }
 }

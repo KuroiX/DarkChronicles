@@ -15226,12 +15226,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb71bf2865eae5469dfa643710c5d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8763380207181232999, guid: 4bda9f1099d01a345b28735dcb9c3c7c,
+  projectile: {fileID: 8471917723367422702, guid: 00bcc1506ecd9cb4e9685ff470e1fdf7,
     type: 3}
   player: {fileID: 354322608}
-  cooldown: 0.5
+  projectileCD: 0.5
   projectileSpeed: 5
   offset: -90
+  projectileLifespan: 1
 --- !u!1001 &1442670342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15621,7 +15622,7 @@ PrefabInstance:
     - target: {fileID: 1481126516830738366, guid: ab3f7178010354d87a5016c7d6b23a5a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.551111
+      value: -4.547985
       objectReference: {fileID: 0}
     - target: {fileID: 1481126516830738366, guid: ab3f7178010354d87a5016c7d6b23a5a,
         type: 3}
@@ -15773,7 +15774,7 @@ PrefabInstance:
     - target: {fileID: 2950804947535917089, guid: 7c53998562858411aa85d8e0c4bc1333,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.74311
+      value: -12.734358
       objectReference: {fileID: 0}
     - target: {fileID: 2950804947535917089, guid: 7c53998562858411aa85d8e0c4bc1333,
         type: 3}
