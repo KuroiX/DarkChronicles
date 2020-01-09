@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: b5d32d0222a3e404ab6c3be6f17f547f
+guid: 6184be188a116c940983d81d41fecd64
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8211661310228821093
-    second: Lizard_WalkingDown-Sheet_0
+      213: 4232381142516530779
+    second: UpLizard-Sheet_0
   - first:
-      213: 6143129322664078979
-    second: Lizard_WalkingDown-Sheet_1
+      213: -3607372259055521486
+    second: UpLizard-Sheet_1
   - first:
-      213: -4389328982773594087
-    second: Lizard_WalkingDown-Sheet_2
+      213: -5353195272156812233
+    second: UpLizard-Sheet_2
   - first:
-      213: 4170830641152991693
-    second: Lizard_WalkingDown-Sheet_3
+      213: 589069975218160865
+    second: UpLizard-Sheet_3
   - first:
-      213: -6501512017483513485
-    second: Lizard_WalkingDown-Sheet_4
+      213: 3603803536236492798
+    second: UpLizard-Sheet_4
   - first:
-      213: 109241994873316375
-    second: Lizard_WalkingDown-Sheet_5
+      213: 7090691128523593108
+    second: UpLizard-Sheet_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,12 +104,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lizard_WalkingDown-Sheet_0
+      name: UpLizard-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,19 +118,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd38f16faf32e774f8a1b7e37ca13ead
-      internalID: -8211661310228821093
+      spriteID: cab31c02e13976f4eb2a2ff0a9d03454
+      internalID: 4232381142516530779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lizard_WalkingDown-Sheet_1
+      name: UpLizard-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb086f2b4867e8142897aea157222aa8
+      internalID: -3607372259055521486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpLizard-Sheet_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 64
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,19 +160,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2555ea85a86afe448ad9543c6fb7e2db
-      internalID: 6143129322664078979
+      spriteID: aef6df01a8460eb45b79140f9d1055d2
+      internalID: -5353195272156812233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lizard_WalkingDown-Sheet_2
+      name: UpLizard-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ab1562662449a4a87193fbd1979401
+      internalID: 589069975218160865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpLizard-Sheet_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 64
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,19 +202,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea7fa39cf70f79244948d0467aea1f65
-      internalID: -4389328982773594087
+      spriteID: 6d9bd9a9a948fad499ebffae33d8b2bc
+      internalID: 3603803536236492798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lizard_WalkingDown-Sheet_3
+      name: UpLizard-Sheet_5
       rect:
         serializedVersion: 2
-        x: 192
+        x: 160
         y: 0
-        width: 64
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,50 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e52e2833a6d2855478dc2beb692dcd13
-      internalID: 4170830641152991693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lizard_WalkingDown-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fb7fe752e878b04eaeca4228d3a6a6e
-      internalID: -6501512017483513485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lizard_WalkingDown-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2701785a5e6dc0429ff194200387ff1
-      internalID: 109241994873316375
+      spriteID: 9add43479f9242f4f81cdc9f56a6907d
+      internalID: 7090691128523593108
       vertices: []
       indices: 
       edges: []
