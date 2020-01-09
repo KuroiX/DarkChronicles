@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3273605809934700988}
   - component: {fileID: 1597593262}
   - component: {fileID: 575832600}
+  - component: {fileID: 8144182865167817883}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -46,9 +47,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -118,3 +120,22 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &8144182865167817883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3273605809934700990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb71bf2865eae5469dfa643710c5d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 8471917723367422702, guid: 00bcc1506ecd9cb4e9685ff470e1fdf7,
+    type: 3}
+  player: {fileID: 0}
+  projectileCD: 0
+  projectileSpeed: 0
+  offset: 0
+  projectileLifespan: 0

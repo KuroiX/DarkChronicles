@@ -6,9 +6,11 @@ using UnityEngine.Serialization;
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject projectile;
+    public GameObject shockwave;
     public GameObject player;
     
     [FormerlySerializedAs("cooldown")] public float projectileCD;
+    public float shockwaveCD;
     public float projectileSpeed;
     public float offset;
     public float projectileLifespan;
@@ -42,6 +44,19 @@ public class PlayerShooting : MonoBehaviour
         {
             projectileCooldown -= Time.deltaTime;
         }
+
+        if (basicAttackCooldown <= 0)
+        {
+            if (Input.GetMouseButton(1))
+            {
+                basicAttack();
+                basicAttackCooldown = shockwaveCD;
+            }
+        }
+        else
+        {
+            basicAttackCooldown -= Time.deltaTime;
+        }
     }
 
     void sendProjectile(Vector2 direction, float rotationZ)
@@ -55,6 +70,8 @@ public class PlayerShooting : MonoBehaviour
 
     void basicAttack()
     {
-        
+        GameObject s = Instantiate(shockwave);
+        s.transform.position = player.transform.position;
+        Destroy(s, s.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
 }
