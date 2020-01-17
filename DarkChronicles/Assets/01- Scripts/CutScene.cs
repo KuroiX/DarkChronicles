@@ -209,7 +209,7 @@ public class CutScene : MonoBehaviour
     IEnumerator EndDialogue()
     {
         _animator.SetBool(IsOpen, false);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         _textLocked = false;
         Next();
     }

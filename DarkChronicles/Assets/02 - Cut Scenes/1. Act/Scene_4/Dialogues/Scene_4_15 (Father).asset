@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
+  m_Name: Scene_4_15 (Father)
+  m_EditorClassIdentifier: 
+  name: Father
+  sentences:
+  - There is another reason why I am telling you this.
+  - There is a legend, that one who has the power can lift the barrier.
+  - '"one who has the power"...'
+  - It was obvious to me that it had to be you.
+  - The legend says there is a temple to the west of the village. Only those who
+    have the power can enter it.
+  - If you want to know more about the barrier and your fate, you should look for
+    that temple.
+  - But keep in mind, that the journey is going to be dangerous.
+  - I always tried not to tell you, because I was afraid I could lose you.
+  - If you decide to uncover the truth, be careful.

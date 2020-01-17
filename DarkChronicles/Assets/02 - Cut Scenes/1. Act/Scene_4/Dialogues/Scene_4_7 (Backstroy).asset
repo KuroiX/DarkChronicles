@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
+  m_Name: Scene_4_7 (Backstroy)
+  m_EditorClassIdentifier: 
+  name: Father
+  sentences:
+  - I didn't try to keep this a secret from you. I just thought you should be old
+    enough.
+  - Now i think there is no way around it anymore.
+  - 15 years ago, when i put my boxes near the river...
+  - ... there was a basket floating along it.
+  - Obviously, i was curious.
+  - As I looked into it, I found a child.
+  - The child was wrapped in a blanket. It seemed to be hand knit.
+  - In the corner, there was a word stitched into it.
+  - It was "Namu".
