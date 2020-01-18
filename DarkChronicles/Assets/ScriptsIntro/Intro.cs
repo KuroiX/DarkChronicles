@@ -8,16 +8,17 @@ using UnityEngine.UI;
 
 public class Intro : MonoBehaviour
 {
+    public AudioSource song;
     public PlayableDirector playableDirector;
-
     public List<String> nextText;
-
     public Text text;
+    public Text anyButton;
     
     private int index = 0;
     
     private void Awake()
     {
+        song.Play();
         PlayNext();
     }
 
@@ -39,7 +40,12 @@ public class Intro : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            anyButton.text = "";
+            text.text = "";
+            StartCoroutine(AudioFadeOut.FadeOut(song, 3f));
+  
         }
     }
+
+
 }
