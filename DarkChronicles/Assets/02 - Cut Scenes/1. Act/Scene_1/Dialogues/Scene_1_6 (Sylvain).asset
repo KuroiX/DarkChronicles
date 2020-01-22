@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
+  m_Name: Scene_1_6 (Sylvain)
+  m_EditorClassIdentifier: 
+  speaker: {fileID: 11400000, guid: 75df0b21bc3e388449f00d678be4daf8, type: 2}
+  sentences:
+  - He probably just imagines that the lizard is his friend anyways. No one except
+    him "can talk" to animals after all.
+  - We thought we would give you a little present to change your hair color back
+    to normal.
