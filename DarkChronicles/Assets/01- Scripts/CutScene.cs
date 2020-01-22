@@ -10,6 +10,11 @@ public class CutScene : MonoBehaviour
 {
     private Text _dialogueText;
     private Text _nameText;
+    private Image _face;
+    private Image _frameLeft;
+    private Image _frameRight;
+    private Image _nameBox;
+    private AudioSource _audioSource;
     private Animator _animator;
     private static readonly int IsOpen = Animator.StringToHash("IsOpen");
     
@@ -20,6 +25,7 @@ public class CutScene : MonoBehaviour
     
     private Queue<CutSceneEvent> _eventQueue;
     private Queue<string> _sentences;
+    private Queue<AudioClip> _voices;
     private PlayableDirector _director;
     private RPGM.Gameplay.CharacterController2D _charController;
 
@@ -33,6 +39,13 @@ public class CutScene : MonoBehaviour
     {
         _dialogueText = GameObject.Find("DialogueText").GetComponent<Text>();
         _nameText = GameObject.Find("NameText").GetComponent<Text>();
+        
+        _face = GameObject.Find("FaceImage").GetComponent<Image>();
+        _frameLeft = GameObject.Find("Inner_frame_left").GetComponent<Image>();
+        _frameRight = GameObject.Find("Inner_frame_right").GetComponent<Image>();
+        _nameBox = GameObject.Find("NameBox").GetComponent<Image>();
+        _audioSource = GetComponent<AudioSource>();
+        
         _animator = GameObject.Find("DialogueBox").GetComponent<Animator>();
     }
     
@@ -60,6 +73,7 @@ public class CutScene : MonoBehaviour
         // Initialize
         _eventQueue = new Queue<CutSceneEvent>();
         _sentences = new Queue<string>();
+        _voices = new Queue<AudioClip>();
         _director = GetComponent<PlayableDirector>();
         _activated = true;
         
@@ -157,11 +171,29 @@ public class CutScene : MonoBehaviour
     #endregion
     
     #region Dialogue
-    
+
     private void StartDialogue (CutSceneEvent _event)
     {
-        _nameText.text = _event.dialogue.name;
-        
+        // Setup visuals
+        if (_event.dialogue.speaker != null)
+        {
+            _nameText.text = _event.dialogue.speaker.name;
+            _face.sprite = _event.dialogue.speaker.sprite;
+            _nameBox.color = _event.dialogue.speaker.cloths;
+            _frameLeft.color = _event.dialogue.speaker.hair;
+            _frameRight.color = _event.dialogue.speaker.hair;
+            //_nameText.font = _event.dialogue.speaker.font;
+            _dialogueText.font = _event.dialogue.speaker.font;
+        }
+        else
+        {
+            _nameText.text = "MISSING";
+            _face.sprite = null;
+            _nameBox.color = Color.gray;
+            _frameLeft.color = Color.gray;
+            _frameRight.color = Color.gray;
+        }
+
         _textLocked = true;
         
         _animator.SetBool(IsOpen, true);
@@ -171,6 +203,11 @@ public class CutScene : MonoBehaviour
         foreach (string sentence in _event.dialogue.sentences)
         {
             _sentences.Enqueue(sentence);
+        }
+        
+        foreach (AudioClip clip in _event.dialogue.clips)
+        {
+            _voices.Enqueue(clip);
         }
 
         DisplayNextSentence();
@@ -195,7 +232,13 @@ public class CutScene : MonoBehaviour
     IEnumerator TypeSentence (string sentence)
     {
         _isRunning = true;
-        
+
+        if (_voices.Count != 0)
+        {
+            _audioSource.clip = _voices.Dequeue();
+            _audioSource.Play();
+        }
+
         _dialogueText.text = "";
         foreach (char letter in sentence)
         {

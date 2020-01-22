@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
   m_Name: Scene_1_8 (Nalo)
   m_EditorClassIdentifier: 
-  name: Nalo
+  speaker: {fileID: 11400000, guid: 3ca5ec00716579a4885a12ea0f3ec114, type: 2}
   sentences:
   - Yeah... you... uh... you suck!

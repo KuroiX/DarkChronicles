@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
   m_Name: Scene_4_8 (Namu)
   m_EditorClassIdentifier: 
-  name: Namu
+  speaker: {fileID: 11400000, guid: dbcf580d982e03a4f820b12dc5260a13, type: 2}
   sentences:
   - ...?!
   - I am not your son?

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60631514fd1018840baa3264a4405882, type: 3}
+  m_Name: Draz
+  m_EditorClassIdentifier: 
+  name: Draz
+  sprite: {fileID: 9186689026834103313, guid: df13b367dbe5db84c98cc69da3c1de77, type: 3}
+  voice: {fileID: 0}
+  hair: {r: 0, g: 0.20392159, b: 0, a: 1}
+  cloths: {r: 0.18039216, g: 0.74509805, b: 0.18823531, a: 1}
+  font: {fileID: 12800000, guid: 240008c15d362fd4881531a6f412695f, type: 3}

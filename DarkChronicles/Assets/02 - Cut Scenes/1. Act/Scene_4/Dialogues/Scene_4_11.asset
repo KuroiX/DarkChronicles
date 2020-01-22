@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
   m_Name: Scene_4_11
   m_EditorClassIdentifier: 
-  name: Father
+  speaker: {fileID: 11400000, guid: 5a0ce1285bccd004a98f09e58fb43154, type: 2}
   sentences:
   - There is more.
   - The direction you were coming from, you must have been put into the river from

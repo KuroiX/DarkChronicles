@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
   m_Name: Scene_1_9 (Sylvain)
   m_EditorClassIdentifier: 
-  name: Sylvain
+  speaker: {fileID: 11400000, guid: 75df0b21bc3e388449f00d678be4daf8, type: 2}
   sentences:
   - How do you like that?

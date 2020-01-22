@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
   m_Name: Scene_1_7 (Kruralt)
   m_EditorClassIdentifier: 
-  name: Kruralt
+  speaker: {fileID: 11400000, guid: 8d88d0b9b77803241aa46f1ebd577f32, type: 2}
   sentences:
   - Right, who has blue hair anyways?
   - Only freaks.

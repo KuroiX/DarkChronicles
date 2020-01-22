@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
   m_Name: Scene_1_11 (Draz)
   m_EditorClassIdentifier: 
-  name: Draz
+  speaker: {fileID: 11400000, guid: 6a82a81f7009fb74f9c00154813fd8d3, type: 2}
   sentences:
   - Oh my god, are you hurt??
   - I was so afraid. I couldn't move an inch.
