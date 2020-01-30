@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/0Y - Creator Kit - RPG/Scenes/Village.unity
     guid: c66421caed2df6d469b757355571ef06
   - enabled: 1
-    path: Assets/Scenes/Dungeon.unity
-    guid: 1e22c4d474cfb1f40bf55be7ea5a7b0e
+    path: Assets/0Y - Creator Kit - RPG/Scenes/Village 1.unity
+    guid: 532a6d0108a303643ae8a7e57391b7ca
   m_configObjects: {}
