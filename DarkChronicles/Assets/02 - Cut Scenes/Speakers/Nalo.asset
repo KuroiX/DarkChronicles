@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Nalo
   m_EditorClassIdentifier: 
   name: Nalo
-  sprite: {fileID: 21300000, guid: 372bf67d30f413f42961a1c7b193c19c, type: 3}
-  voice: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9719e22ac4fcae6488cb849e2a9d740b, type: 3}
   hair: {r: 1, g: 0.7019608, b: 0, a: 1}
   cloths: {r: 0.19215688, g: 0.8196079, b: 0, a: 1}
   font: {fileID: 12800000, guid: 3655a711af6f835448a86df2d587d39c, type: 3}

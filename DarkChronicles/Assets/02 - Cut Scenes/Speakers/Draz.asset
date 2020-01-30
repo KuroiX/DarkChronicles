@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Draz
   m_EditorClassIdentifier: 
   name: Draz
-  sprite: {fileID: 9186689026834103313, guid: df13b367dbe5db84c98cc69da3c1de77, type: 3}
-  voice: {fileID: 0}
+  sprite: {fileID: 21300000, guid: cff79f6b948a7d74bb61d0b7ad1ef4ae, type: 3}
   hair: {r: 0, g: 0.20392159, b: 0, a: 1}
   cloths: {r: 0.18039216, g: 0.74509805, b: 0.18823531, a: 1}
   font: {fileID: 12800000, guid: 240008c15d362fd4881531a6f412695f, type: 3}
