@@ -30,32 +30,31 @@ public class PlayerShooting : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
 
-        if (projectileCooldown <= 0)
+        if (projectileCooldown <= 0 && Input.GetMouseButton(0))
         {
-            if (Input.GetMouseButton(0))
-            {
-                float distance = difference.magnitude;
+            float distance = difference.magnitude;
                 Vector2 direction = difference / distance;
                 sendProjectile(direction.normalized, rotationZ);
                 projectileCooldown = projectileCD;
-            }
         }
         else
         {
             projectileCooldown -= Time.deltaTime;
         }
 
-        if (basicAttackCooldown <= 0)
+        if (basicAttackCooldown <= 0 && Input.GetMouseButton(1))
         {
-            if (Input.GetMouseButton(1))
-            {
-                basicAttack();
+            basicAttack();
                 basicAttackCooldown = shockwaveCD;
-            }
         }
         else
         {
             basicAttackCooldown -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown("T"))
+        {
+            gameObject.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
         }
     }
 
