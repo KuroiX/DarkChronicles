@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using RPGM.Gameplay;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -30,7 +31,7 @@ public class PlayerShooting : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
 
-        if (projectileCooldown <= 0 && Input.GetMouseButton(0))
+        if (projectileCooldown <= 0 && Input.GetMouseButton(0) && player.transform.localScale == new Vector3(1,1,1))
         {
             float distance = difference.magnitude;
                 Vector2 direction = difference / distance;
@@ -42,7 +43,7 @@ public class PlayerShooting : MonoBehaviour
             projectileCooldown -= Time.deltaTime;
         }
 
-        if (basicAttackCooldown <= 0 && Input.GetMouseButton(1))
+        if (basicAttackCooldown <= 0 && Input.GetMouseButton(1) && player.transform.localScale == new Vector3(1,1,1))
         {
             basicAttack();
                 basicAttackCooldown = shockwaveCD;
@@ -52,9 +53,17 @@ public class PlayerShooting : MonoBehaviour
             basicAttackCooldown -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown("T"))
+        if (Input.GetKeyDown("t") && player.transform.localScale == new Vector3(1,1,1))
         {
-            gameObject.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+            player.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+            player.GetComponent<CharacterController2D>().speed = 80;
+            player.layer = 8;
+        }
+        else if(Input.GetKeyDown("t"))
+        {
+            player.transform.localScale = new Vector3(1,1,1);
+            player.GetComponent<CharacterController2D>().speed = 22;
+            player.layer = 0;
         }
     }
 
