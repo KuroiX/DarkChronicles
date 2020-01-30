@@ -6,27 +6,34 @@ using UnityEngine;
 
 public class Prop : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private Sprite dead;
+    [SerializeField] 
+    private GameObject nextCutscene;
 
-    public Sprite dead;
+    private bool _isDead;
 
     private SpriteRenderer renderer;
-
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Attack"))
         {
-            if (GetComponent<SpriteRenderer>().sprite != dead)
+            if (!_isDead)
+            {
+                _isDead = true;
                 GetComponent<SpriteRenderer>().sprite = dead;
+                GetComponent<Collider2D>().enabled = false;
+                TriggerCutscene();
+            }
+        }
+    }
+
+    void TriggerCutscene()
+    {
+        if (!nextCutscene.Equals(null))
+        {
+            nextCutscene.SetActive(true);
         }
     }
 }
