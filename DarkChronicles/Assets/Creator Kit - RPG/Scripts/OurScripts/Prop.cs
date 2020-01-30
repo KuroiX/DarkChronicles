@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Prop : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public Sprite dead;
-
+    public AudioClip broken;
     private SpriteRenderer renderer;
 
     void Start()
