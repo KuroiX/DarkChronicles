@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using RPGM.Gameplay;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Unity.Audio;
 
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject shockwave;
     public GameObject player;
+    public AudioClip missileSound;
     
     [FormerlySerializedAs("cooldown")] public float projectileCD;
     public float shockwaveCD;
@@ -45,7 +47,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (basicAttackCooldown <= 0 && Input.GetMouseButton(1) && player.transform.localScale == new Vector3(1,1,1))
         {
-            basicAttack();
+           electrify();
                 basicAttackCooldown = shockwaveCD;
         }
         else
@@ -69,6 +71,9 @@ public class PlayerShooting : MonoBehaviour
 
     void sendProjectile(Vector2 direction, float rotationZ)
     {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = missileSound;
+        audio.Play();
         GameObject p = Instantiate(projectile) as GameObject;
         p.transform.position = player.transform.position;
         p.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + offset);
@@ -76,7 +81,7 @@ public class PlayerShooting : MonoBehaviour
         Destroy(p, projectileLifespan);
     }
 
-    void basicAttack()
+    void electrify()
     {
         GameObject s = Instantiate(shockwave);
         s.transform.position = player.transform.position;
