@@ -15,6 +15,7 @@ MonoBehaviour:
   speaker: {fileID: 11400000, guid: 6a82a81f7009fb74f9c00154813fd8d3, type: 2}
   sentences:
   - ?!?!?!
-  - Damn, you just used your magic to wreck your house!!
+  - Damn... you just used your magic to wreck the house!!
   - Maybe we should find your father and tell him what happened.
-  - I think he is putting his boxes all over the village again, like always...
+  - I think he is putting those boxes all over the village again, like always...
+  clips: []

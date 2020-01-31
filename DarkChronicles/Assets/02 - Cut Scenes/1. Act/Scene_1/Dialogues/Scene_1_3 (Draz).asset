@@ -15,7 +15,7 @@ MonoBehaviour:
   speaker: {fileID: 11400000, guid: 6a82a81f7009fb74f9c00154813fd8d3, type: 2}
   sentences:
   - I'm so excited, I have a surprise for you!
-  - Wait here, I'm gonna get it real quik.
+  - Wait here, I'm gonna get it real quick.
   clips:
-  - {fileID: 8300000, guid: d617102f0067466459a5a73c418501e7, type: 3}
-  - {fileID: 8300000, guid: d617102f0067466459a5a73c418501e7, type: 3}
+  - {fileID: 8300000, guid: 11a2bd42d7d142e40ad67da64a13acf0, type: 3}
+  - {fileID: 8300000, guid: 41d70cd5a820e384fbbe277bc6197714, type: 3}

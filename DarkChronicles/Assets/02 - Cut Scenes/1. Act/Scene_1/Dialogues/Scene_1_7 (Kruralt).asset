@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 8d88d0b9b77803241aa46f1ebd577f32, type: 2}
   sentences:
-  - Right, who has blue hair anyways?
+  - Right, no kid has white hair anyways.
   - Only freaks.
+  clips: []
