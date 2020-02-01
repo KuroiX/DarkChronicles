@@ -15,6 +15,7 @@ namespace RPGM.UI
         public int selectedButton = 0;
         public int buttonCount = 0;
 
+        [SerializeField]
         SpriteButton[] buttons;
         Camera mainCamera;
         GameModel model = Schedule.GetModel<GameModel>();
@@ -134,7 +135,7 @@ namespace RPGM.UI
             onButton = null;
         }
 
-        void Awake()
+        void Start()
         {
             dialogLayout.gameObject.SetActive(false);
             buttons = dialogLayout.buttons;
