@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
 
-    [SerializeField] private AudioClip[] clips;
+    [SerializeField] private AudioClip[] musicClips;
+    [SerializeField] private AudioClip[] soundClips;
     
     
-    private AudioSource _source;
+    private AudioSource _musicSource;
+    [HideInInspector]
+    public AudioSource soundSource;
     public static AudioManager Manager;
     
     void Start()
@@ -18,13 +21,20 @@ public class AudioManager : MonoBehaviour
         {
             Manager = this;
             DontDestroyOnLoad(gameObject);
-            _source = GetComponent<AudioSource>();
+            _musicSource = GetComponent<AudioSource>();
+            soundSource = GetComponents<AudioSource>()[1];
             SceneManager.sceneLoaded += FadeIn;
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+    
+    public void PlaySound(int index)
+    {
+        soundSource.clip = soundClips[index];
+        soundSource.Play();
     }
 
 
@@ -38,26 +48,28 @@ public class AudioManager : MonoBehaviour
     IEnumerator FadeToNext(int index, float duration, float targetVolume)
     {
         float currentTime = 0;
-        float start = _source.volume;
+        float start = _musicSource.volume;
 
         while (currentTime < duration)
         {
             currentTime += Time.deltaTime;
-            _source.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            _musicSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
             yield return null;
         }
         
-        _source.clip = clips[index];
-        _source.Play();
+        _musicSource.clip = musicClips[index];
+        _musicSource.volume = start;
+        _musicSource.Play();
 
-        currentTime = 0;
+        //currentTime = 0;
 
-        while (currentTime < duration)
+        /*while (currentTime < duration)
         {
             currentTime += Time.deltaTime;
-            _source.volume = Mathf.Lerp(targetVolume, start, currentTime / duration);
+            _musicSource.volume = Mathf.Lerp(targetVolume, start, currentTime / duration);
             yield return null;
         }
+        */
     }
 
     public void FadeOut()
@@ -68,12 +80,12 @@ public class AudioManager : MonoBehaviour
     IEnumerator FadeOutEnumerator()
     {
         float currentTime = 0;
-        float start = _source.volume;
+        float start = _musicSource.volume;
 
         while (currentTime < 0.5f)
         {
             currentTime += Time.deltaTime;
-            _source.volume = Mathf.Lerp(start, 0, currentTime / 0.5f);
+            _musicSource.volume = Mathf.Lerp(start, 0, currentTime / 0.5f);
             yield return null;
         }
     }
@@ -97,7 +109,7 @@ public class AudioManager : MonoBehaviour
 
     void StartMusic(int index)
     {
-        _source.clip = clips[index];
-        _source.Play();
+        _musicSource.clip = musicClips[index];
+        _musicSource.Play();
     } 
 }

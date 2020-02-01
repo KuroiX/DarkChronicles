@@ -92,7 +92,7 @@ public class ProgressManager : MonoBehaviour
 
     public void EndCutScene(int index)
     {
-        Debug.Log("haha: " + index);
+        //Debug.Log("haha: " + index);
         state = (ProgressState)index;
     }
 
