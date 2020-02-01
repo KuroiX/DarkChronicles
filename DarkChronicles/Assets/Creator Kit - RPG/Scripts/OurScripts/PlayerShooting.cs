@@ -7,16 +7,16 @@ using Unity.Audio;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject projectile;
-    public GameObject shockwave;
-    public GameObject player;
-    public AudioClip missileSound;
+    static public GameObject projectile;
+    static public GameObject shockwave;
+    static public GameObject player;
+    static public AudioClip missileSound;
     
-    [FormerlySerializedAs("cooldown")] public float projectileCD;
-    public float shockwaveCD;
-    public float projectileSpeed;
-    public float offset;
-    public float projectileLifespan;
+    static public float projectileCD;
+    static public float shockwaveCD;
+    static public float projectileSpeed;
+    static public float offset;
+    static public float projectileLifespan;
     
     private float projectileCooldown;
     private float basicAttackCooldown;
