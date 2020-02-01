@@ -17,6 +17,4 @@ MonoBehaviour:
   - Look, the weirdo is talking to his lizard friend again.
   - He probably just imagines that the lizard is his friend anyways. No one except
     him "can talk" to animals after all.
-  clips:
-  - {fileID: 8300000, guid: 38abcb4ff884c0b459d526537ada5479, type: 3}
-  - {fileID: 8300000, guid: 48a483cb365222242bf32720bc293a23, type: 3}
+  clips: []

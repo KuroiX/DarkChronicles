@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Namu
   sprite: {fileID: 21300000, guid: f22540e8ea335034b92c27795aa254c6, type: 3}
-  voice: {fileID: 0}
-  hair: {r: 0, g: 0.8000001, b: 0.6509804, a: 1}
+  hair: {r: 0.8117648, g: 0.8117648, b: 0.8117648, a: 1}
   cloths: {r: 0.8000001, g: 0.13333334, b: 0.32941177, a: 1}
   font: {fileID: 12800000, guid: 3655a711af6f835448a86df2d587d39c, type: 3}

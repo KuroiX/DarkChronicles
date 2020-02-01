@@ -15,5 +15,4 @@ MonoBehaviour:
   speaker: {fileID: 11400000, guid: dbcf580d982e03a4f820b12dc5260a13, type: 2}
   sentences:
   - Oh hey, I didn't see you.
-  clips:
-  - {fileID: 8300000, guid: b64a9ce7ecb4d644aa1a872e126fad6a, type: 3}
+  clips: []
