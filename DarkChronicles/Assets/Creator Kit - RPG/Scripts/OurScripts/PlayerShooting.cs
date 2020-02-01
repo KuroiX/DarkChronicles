@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using RPGM.Gameplay;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Unity.Audio;
 
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject shockwave;
     public GameObject player;
+    public AudioClip missileSound;
     
     [FormerlySerializedAs("cooldown")] public float projectileCD;
     public float shockwaveCD;
@@ -30,37 +33,47 @@ public class PlayerShooting : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
 
-        if (projectileCooldown <= 0)
+        if (projectileCooldown <= 0 && Input.GetMouseButton(0) && player.transform.localScale == new Vector3(1,1,1))
         {
-            if (Input.GetMouseButton(0))
-            {
-                float distance = difference.magnitude;
+            float distance = difference.magnitude;
                 Vector2 direction = difference / distance;
                 sendProjectile(direction.normalized, rotationZ);
                 projectileCooldown = projectileCD;
-            }
         }
         else
         {
             projectileCooldown -= Time.deltaTime;
         }
 
-        if (basicAttackCooldown <= 0)
+        if (basicAttackCooldown <= 0 && Input.GetMouseButton(1) && player.transform.localScale == new Vector3(1,1,1))
         {
-            if (Input.GetMouseButton(1))
-            {
-                basicAttack();
+           electrify();
                 basicAttackCooldown = shockwaveCD;
-            }
         }
         else
         {
             basicAttackCooldown -= Time.deltaTime;
         }
+
+        if (Input.GetKeyDown("t") && player.transform.localScale == new Vector3(1,1,1))
+        {
+            player.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+            player.GetComponent<CharacterController2D>().speed = 80;
+            player.layer = 8;
+        }
+        else if(Input.GetKeyDown("t"))
+        {
+            player.transform.localScale = new Vector3(1,1,1);
+            player.GetComponent<CharacterController2D>().speed = 22;
+            player.layer = 0;
+        }
     }
 
     void sendProjectile(Vector2 direction, float rotationZ)
     {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = missileSound;
+        audio.Play();
         GameObject p = Instantiate(projectile) as GameObject;
         p.transform.position = player.transform.position;
         p.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + offset);
@@ -68,7 +81,7 @@ public class PlayerShooting : MonoBehaviour
         Destroy(p, projectileLifespan);
     }
 
-    void basicAttack()
+    void electrify()
     {
         GameObject s = Instantiate(shockwave);
         s.transform.position = player.transform.position;
