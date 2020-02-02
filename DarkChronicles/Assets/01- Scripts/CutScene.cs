@@ -43,7 +43,7 @@ public class CutScene : MonoBehaviour
         _frameLeft = GameObject.Find("Inner_frame_left").GetComponent<Image>();
         _frameRight = GameObject.Find("Inner_frame_right").GetComponent<Image>();
         _nameBox = GameObject.Find("NameBox").GetComponent<Image>();
-        //_audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         
         _animator = GameObject.Find("DialogueBox").GetComponent<Animator>();
     }
@@ -157,7 +157,7 @@ public class CutScene : MonoBehaviour
         _charController.enabled = true;
         _activated = false;
         ActivateNextCutscene();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void ActivateNextCutscene()
@@ -205,10 +205,10 @@ public class CutScene : MonoBehaviour
             _sentences.Enqueue(sentence);
         }
         
-        foreach (AudioClip clip in _event.dialogue.clips)
+        /*foreach (AudioClip clip in _event.dialogue.clips)
         {
             _voices.Enqueue(clip);
-        }
+        }*/
 
         DisplayNextSentence();
     }

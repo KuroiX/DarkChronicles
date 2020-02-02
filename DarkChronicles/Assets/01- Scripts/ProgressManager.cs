@@ -147,16 +147,16 @@ public class ProgressManager : MonoBehaviour
     /// <param name="active">Sets the cutscene at index to active</param>
     void DestroyCutscenes(int index, bool active)
     {
-        //Debug.Log("ProgressManager: DestroyCutscenes() " + index);
-        
-        Transform parent = GameObject.Find("Cut Scenes").transform;
+        Debug.Log("ProgressManager: DestroyCutscenes() " + index);
+
+        Transform parent = cutscenes.transform;
         
         for (int i = 0; i <= index && i < parent.childCount; i++)
         {
             if (i != index)
             {
                 
-                Destroy(parent.GetChild(i).gameObject);
+                parent.GetChild(i).gameObject.SetActive(false);
             }
             else
             {
