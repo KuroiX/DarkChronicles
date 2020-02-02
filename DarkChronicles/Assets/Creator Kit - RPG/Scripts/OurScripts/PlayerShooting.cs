@@ -65,8 +65,8 @@ public class PlayerShooting : MonoBehaviour
 
     void sendProjectile(Vector2 direction, float rotationZ)
     {
-        AudioManager.Manager.soundSource.clip = missileSound;
-        AudioManager.Manager.soundSource.Play();
+        //AudioManager.Manager.soundSource.clip = missileSound;
+//        AudioManager.Manager.soundSource.Play();
         
         GameObject p = Instantiate(projectile) as GameObject;
         p.transform.position = player.transform.position;
