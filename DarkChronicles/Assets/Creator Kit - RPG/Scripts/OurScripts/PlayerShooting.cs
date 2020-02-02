@@ -54,19 +54,34 @@ public class PlayerShooting : MonoBehaviour
             player.transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
             player.GetComponent<CharacterController2D>().speed = 80;
             player.layer = 8;
+            
+            if (AudioManager.Manager != null)
+            {
+                AudioManager.Manager.soundSource.clip = AudioManager.Manager.soundClips[2];
+                AudioManager.Manager.soundSource.Play();
+            }
         }
         else if(ProgressManager.Manager.shrink && Input.GetKeyDown("t"))
         {
             player.transform.localScale = new Vector3(1,1,1);
             player.GetComponent<CharacterController2D>().speed = 22;
             player.layer = 0;
+            
+            if (AudioManager.Manager != null)
+            {
+                AudioManager.Manager.soundSource.clip = AudioManager.Manager.soundClips[2];
+                AudioManager.Manager.soundSource.Play();
+            }
         }
     }
 
     void sendProjectile(Vector2 direction, float rotationZ)
     {
-        //AudioManager.Manager.soundSource.clip = missileSound;
-//        AudioManager.Manager.soundSource.Play();
+        if (AudioManager.Manager != null)
+        {
+            AudioManager.Manager.soundSource.clip = AudioManager.Manager.soundClips[1];
+            AudioManager.Manager.soundSource.Play();
+        }
         
         GameObject p = Instantiate(projectile) as GameObject;
         p.transform.position = player.transform.position;

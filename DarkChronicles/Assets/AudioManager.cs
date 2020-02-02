@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 {
 
     [SerializeField] private AudioClip[] musicClips;
-    [SerializeField] private AudioClip[] soundClips;
+    public AudioClip[] soundClips;
     
     
     private AudioSource _musicSource;
