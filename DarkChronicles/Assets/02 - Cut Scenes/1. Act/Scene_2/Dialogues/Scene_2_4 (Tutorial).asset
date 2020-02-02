@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec41153e54b21b418b058aa91811eac, type: 3}
   m_Name: Scene_2_4 (Tutorial)
   m_EditorClassIdentifier: 
-  speaker: {fileID: 0}
+  speaker: {fileID: 11400000, guid: 26bdf892dedfb1b419b0cc7c4c65352b, type: 2}
   sentences:
   - To shoot a magic missile, press anywhere on the screen with your mouse.
   - Aim at a box and release your anger!

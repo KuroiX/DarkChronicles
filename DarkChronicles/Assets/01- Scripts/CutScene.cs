@@ -81,6 +81,7 @@ public class CutScene : MonoBehaviour
         _charController = GameObject.Find("Character").GetComponent<RPGM.Gameplay.CharacterController2D>();
         _charController.LockMovement();
         _charController.enabled = false;
+        ProgressManager.Manager.DisableAbilites();
 
         // Enqueue events
         for (int i = 0; i < events.Length; i++)

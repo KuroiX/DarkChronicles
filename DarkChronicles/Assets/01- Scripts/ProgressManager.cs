@@ -20,6 +20,31 @@ public class ProgressManager : MonoBehaviour
     public ProgressState state = ProgressState.Start;
     public static ProgressManager Manager;
 
+    [SerializeField] private GameObject[] gOs;
+
+    public bool missile;
+    public bool shockwave;
+    public bool shrink;
+
+    public void EnableMissile()
+    {
+        missile = true;
+    }
+
+    public void EnableMissileAndShrink()
+    {
+        missile = true;
+        shrink = true;
+    }
+
+    public void DisableAbilites()
+    {
+        missile = false;
+        shockwave = false;
+        shrink = false;
+    }
+    
+
     void Start()
     {
         if (Manager == null)
@@ -79,9 +104,21 @@ public class ProgressManager : MonoBehaviour
                     
                     GameObject.Find("Father").transform.position = new Vector3(-5.5f, 10.75f, 0);
                     GameObject.Find("TheBox").transform.position = new Vector3(14, -4.5f, 1.57f);
+                    GameObject liz = GameObject.Find("Lizard");
+                    liz.transform.position = new Vector3(-10.75f, -3, 0);
+                    liz.GetComponent<SpriteRenderer>().flipX = true;
                     // remove villagers?
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        GameObject gO = GameObject.Find("npc_" + i);
+                        Destroy(gO);
+                    }
                     // maybe let some ask questions
-                    
+                    foreach (GameObject gO in gOs)
+                    {
+                        Instantiate(gO);
+                    }
+
                     break;
                 case ProgressState.CutScene6:
                     // who knows

@@ -57,8 +57,9 @@ public class AudioManager : MonoBehaviour
             yield return null;
         }
         
+        Debug.Log(start);
         _musicSource.clip = musicClips[index];
-        _musicSource.volume = start;
+        _musicSource.volume = 1;
         _musicSource.Play();
 
         //currentTime = 0;
