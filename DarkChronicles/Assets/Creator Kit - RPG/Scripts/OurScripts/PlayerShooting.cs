@@ -7,26 +7,20 @@ using Unity.Audio;
 
 public class PlayerShooting : MonoBehaviour
 {
-    static public GameObject projectile;
-    static public GameObject shockwave;
-    static public GameObject player;
-    static public AudioClip missileSound;
+    public GameObject projectile;
+    public GameObject shockwave;
+    public GameObject player;
+    public AudioClip missileSound;
     
-    static public float projectileCD;
-    static public float shockwaveCD;
-    static public float projectileSpeed;
-    static public float offset;
-    static public float projectileLifespan;
+    public float projectileCD;
+    public float shockwaveCD;
+    public float projectileSpeed;
+    public float offset;
+    public float projectileLifespan;
     
     private float projectileCooldown;
     private float basicAttackCooldown;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.transform.position;
@@ -71,9 +65,9 @@ public class PlayerShooting : MonoBehaviour
 
     void sendProjectile(Vector2 direction, float rotationZ)
     {
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.clip = missileSound;
-        audio.Play();
+        //AudioManager.Manager.soundSource.clip = missileSound;
+//        AudioManager.Manager.soundSource.Play();
+        
         GameObject p = Instantiate(projectile) as GameObject;
         p.transform.position = player.transform.position;
         p.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ + offset);

@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: dbcf580d982e03a4f820b12dc5260a13, type: 2}
   sentences:
-  - Oh hey, I haven't noticed you.
-  clips:
-  - {fileID: 8300000, guid: 93850243ac83fbf4597b770e9f05bb99, type: 3}
+  - Oh hey, I didn't see you.
+  clips: []
