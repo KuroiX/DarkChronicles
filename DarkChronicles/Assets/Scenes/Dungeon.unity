@@ -12008,7 +12008,7 @@ GameObject:
   - component: {fileID: 737415427}
   - component: {fileID: 737415426}
   m_Layer: 0
-  m_Name: Ghost king_free _0 (1)
+  m_Name: Ghost king_free _0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12115,9 +12115,10 @@ MonoBehaviour:
   projectileLifespan: 4
   projectileSpeed: 2
   offset: 0
-  lives: 1
+  lives: 7
   projectile: {fileID: 6814519031583201309, guid: d2e4022efd24c924fa049a759de7a40e,
     type: 3}
+  book: {fileID: 1338265183}
 --- !u!61 &737415427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12879,7 +12880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1338265184
 Rigidbody2D:
   serializedVersion: 4
@@ -12974,8 +12975,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338265183}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.67, y: 19.67, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 52.67, y: 53.2, z: 0}
   m_LocalScale: {x: 0.534093, y: 0.466532, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

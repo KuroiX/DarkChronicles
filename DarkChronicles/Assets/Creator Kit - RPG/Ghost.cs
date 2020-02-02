@@ -13,6 +13,8 @@ public class Ghost : MonoBehaviour
     public int lives;
 
     public GameObject projectile;
+    
+    public GameObject book;
 
     public void LookPlayer()
     {
@@ -81,8 +83,13 @@ public class Ghost : MonoBehaviour
         if (other.CompareTag("Attack"))
         {
             --lives;
-            
         }
+        
             
+    }
+
+    public void GetBook()
+    { 
+        book.transform.position = new Vector3(52.7f, 19.75f, 0f);
     }
 }

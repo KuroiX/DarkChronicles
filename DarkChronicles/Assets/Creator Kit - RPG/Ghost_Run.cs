@@ -7,10 +7,11 @@ public class Ghost_Run : StateMachineBehaviour
     public float speed = 2.5f;
     public float range = 3f;
     public float explosionCooldown = 10f;
-    
+
     private Transform player;
     private Rigidbody2D rb;
     private Ghost ghost;
+    
     
     private float remainingCD;
     
@@ -48,10 +49,8 @@ public class Ghost_Run : StateMachineBehaviour
 
         if (ghost.lives <= 0)
         {
+            ghost.GetBook();
             animator.SetTrigger("Death");
-            
-
-
         }
         
     }
