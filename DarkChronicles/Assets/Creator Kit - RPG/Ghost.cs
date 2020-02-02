@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class Ghost : MonoBehaviour
     public float projectileLifespan;
     public float projectileSpeed;
     public float offset;
+    public int lives;
 
     public GameObject projectile;
 
@@ -72,5 +74,15 @@ public class Ghost : MonoBehaviour
     public void Attack()
     {
         player.position = new Vector3(40f,20f);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Attack"))
+        {
+            --lives;
+            
+        }
+            
     }
 }

@@ -45,6 +45,14 @@ public class Ghost_Run : StateMachineBehaviour
         {
             remainingCD -= Time.deltaTime;
         }
+
+        if (ghost.lives <= 0)
+        {
+            animator.SetTrigger("Death");
+            
+
+
+        }
         
     }
      
