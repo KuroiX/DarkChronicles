@@ -52,7 +52,7 @@ public class CutScene : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         //Debug.Log("CutScene.OnTriggerEnter2D()");
-        if (!_activated)
+        if (!_activated && !col.CompareTag("Attack"))
             Setup(col);
     }
     
