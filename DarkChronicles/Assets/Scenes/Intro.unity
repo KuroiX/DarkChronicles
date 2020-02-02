@@ -220,11 +220,11 @@ MonoBehaviour:
   song: {fileID: 1622246252}
   playableDirector: {fileID: 130574259}
   nextText:
-  - '500 years ago, '
-  - There was a very powerful mage called A
+  - '1000 years ago, '
+  - There was a very powerful mage called Skrymira
   - She was so strong, that only one person could match up to her powers.
-  - They called him The Hero.
-  - 'One day, A turned evil. '
+  - They called him Aite, The Hero.
+  - 'One day, Skrymira turned evil. '
   - After years abusing her powers and tormenting the people,
   - her reign of chaos finally ended by a fierce battle against The Hero.
   - No one truly knows what happened that day.
@@ -232,11 +232,11 @@ MonoBehaviour:
   - 'No bodies were found, '
   - and the village, which is relatively close to the site of battle, is now surrounded
     by a magical barrier.
-  - The barrier still stands. No one can cross it.
+  - The barrier still stands. People say it is impenetrable.
   - The villagers, which were once all mages, could no longer practice their magic
     without getting weak, sick or even die
-  - Because of that, many believe that the Hero set up the barrier as a protection,
-    so that no powerful unstoppable mage could ever exist again.
+  - Because of that, people inside believe that the Hero set up the barrier as a
+    protection, so that no powerful unstoppable mage could ever do harm again.
   - And so it was, until......
   text: {fileID: 659219045}
   anyButton: {fileID: 618414312}
