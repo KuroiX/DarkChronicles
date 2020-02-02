@@ -43,14 +43,14 @@ public class CutScene : MonoBehaviour
         _frameLeft = GameObject.Find("Inner_frame_left").GetComponent<Image>();
         _frameRight = GameObject.Find("Inner_frame_right").GetComponent<Image>();
         _nameBox = GameObject.Find("NameBox").GetComponent<Image>();
-        _audioSource = GetComponent<AudioSource>();
+        //_audioSource = GetComponent<AudioSource>();
         
         _animator = GameObject.Find("DialogueBox").GetComponent<Animator>();
     }
     
     void OnTriggerEnter2D(Collider2D col)
     {
-        //Debug.Log("CutScene.OnTriggerEnter2D()");
+        Debug.Log("CutScene.OnTriggerEnter2D()");
         if (!_activated && !col.CompareTag("Attack"))
             Setup(col);
     }
