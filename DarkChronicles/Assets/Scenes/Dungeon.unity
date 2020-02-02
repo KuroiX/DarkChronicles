@@ -3468,7 +3468,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b14433eb56a015440baa032fc02396c3, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7948309521016487140, guid: d96c0846c7d644f72bfbf301de1def5c,
         type: 3}
       propertyPath: batches.Array.data[0].sceneParent
@@ -4775,7 +4775,7 @@ PrefabInstance:
     - target: {fileID: 1481126516830738366, guid: ab3f7178010354d87a5016c7d6b23a5a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5526485
+      value: -4.552612
       objectReference: {fileID: 0}
     - target: {fileID: 1481126516830738366, guid: ab3f7178010354d87a5016c7d6b23a5a,
         type: 3}
@@ -4850,7 +4850,7 @@ PrefabInstance:
     - target: {fileID: 2950804947535917089, guid: 7c53998562858411aa85d8e0c4bc1333,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.852715
+      value: -21.852537
       objectReference: {fileID: 0}
     - target: {fileID: 2950804947535917089, guid: 7c53998562858411aa85d8e0c4bc1333,
         type: 3}

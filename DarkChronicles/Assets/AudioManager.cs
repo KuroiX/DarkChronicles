@@ -101,6 +101,9 @@ public class AudioManager : MonoBehaviour
             case 2:
                 StartMusic(3);
                 break;
+            case 3:
+                StartMusic(4);
+                break;
             case 4:
                 StartMusic(7);
                 break;

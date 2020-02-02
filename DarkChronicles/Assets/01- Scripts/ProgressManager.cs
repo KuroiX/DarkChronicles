@@ -68,6 +68,7 @@ public class ProgressManager : MonoBehaviour
     {
         if (scene.buildIndex == 1)
         {
+            cutscenes.SetActive(true);
             switch (state)
             {
                 case ProgressState.Start:
@@ -125,7 +126,13 @@ public class ProgressManager : MonoBehaviour
                     break;
             }
         }
+        else
+        {
+           cutscenes.SetActive(false); 
+        }
     }
+
+    public GameObject cutscenes;
 
     public void EndCutScene(int index)
     {
