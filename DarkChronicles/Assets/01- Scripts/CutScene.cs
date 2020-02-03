@@ -162,7 +162,7 @@ public class CutScene : MonoBehaviour
 
     private void ActivateNextCutscene()
     {
-        if (!nextCutscene.Equals(null))
+        if (nextCutscene != null)
         {
             nextCutscene.SetActive(true);
         }
