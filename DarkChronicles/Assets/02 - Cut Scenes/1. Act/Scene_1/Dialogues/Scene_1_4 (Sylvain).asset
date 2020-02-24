@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 75df0b21bc3e388449f00d678be4daf8, type: 2}
   sentences:
-  - I see you weirdo are talking to your lizard friend again.
-  - You really think you are so special, being the only one who can use magic without
-    getting sick.
+  - Look, the weirdo is talking to his lizard friend again.
+  - He probably just imagines that the lizard is his friend anyways. No one except
+    him "can talk" to animals after all.
+  clips: []

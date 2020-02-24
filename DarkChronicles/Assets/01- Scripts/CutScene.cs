@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
@@ -51,8 +50,8 @@ public class CutScene : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D col)
     {
-        //Debug.Log("CutScene.OnTriggerEnter2D()");
-        if (!_activated)
+        Debug.Log("CutScene.OnTriggerEnter2D()");
+        if (!_activated && !col.CompareTag("Attack"))
             Setup(col);
     }
     
@@ -81,6 +80,7 @@ public class CutScene : MonoBehaviour
         _charController = GameObject.Find("Character").GetComponent<RPGM.Gameplay.CharacterController2D>();
         _charController.LockMovement();
         _charController.enabled = false;
+        ProgressManager.Manager.DisableAbilites();
 
         // Enqueue events
         for (int i = 0; i < events.Length; i++)
@@ -157,12 +157,12 @@ public class CutScene : MonoBehaviour
         _charController.enabled = true;
         _activated = false;
         ActivateNextCutscene();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void ActivateNextCutscene()
     {
-        if (!nextCutscene.Equals(null))
+        if (nextCutscene != null)
         {
             nextCutscene.SetActive(true);
         }
@@ -205,10 +205,10 @@ public class CutScene : MonoBehaviour
             _sentences.Enqueue(sentence);
         }
         
-        foreach (AudioClip clip in _event.dialogue.clips)
+        /*foreach (AudioClip clip in _event.dialogue.clips)
         {
             _voices.Enqueue(clip);
-        }
+        }*/
 
         DisplayNextSentence();
     }

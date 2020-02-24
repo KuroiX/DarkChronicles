@@ -18,18 +18,13 @@ namespace RPGM.UI
 
         public SpriteButton buttonA, buttonB, buttonC;
 
-        [NonSerialized] public SpriteButton[] buttons;
+        public SpriteButton[] buttons;
         Vector2 minSize;
 
         void Awake()
         {
             buttons = new[] { buttonA, buttonB, buttonC };
             minSize = spriteRenderer.size;
-        }
-
-        void OnClick()
-        {
-
         }
 
         public void SetIcon(Sprite icon)

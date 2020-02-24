@@ -8,9 +8,8 @@ public class DisableAndSet : MonoBehaviour
 
     void Start()
     {
-        if (!animator)
+        if (!animator) 
         {
-            Debug.Log("animator");
             GetComponent<Animator>().enabled = animator;
         }
     }

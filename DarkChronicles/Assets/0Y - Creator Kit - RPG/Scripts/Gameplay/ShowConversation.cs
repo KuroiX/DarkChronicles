@@ -67,7 +67,7 @@ namespace RPGM.Events
             }
 
             //speak some gibberish at two speech syllables per word.
-            UserInterfaceAudio.Speak(gameObject.GetInstanceID(), ci.text.Split(' ').Length * 2, 1);
+            //UserInterfaceAudio.Speak(gameObject.GetInstanceID(), ci.text.Split(' ').Length * 2, 1);
 
             //if this conversation item has an id, register it in the model.
             if (!string.IsNullOrEmpty(ci.id))

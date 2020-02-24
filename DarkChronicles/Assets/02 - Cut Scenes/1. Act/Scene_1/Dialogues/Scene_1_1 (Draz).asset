@@ -15,5 +15,4 @@ MonoBehaviour:
   speaker: {fileID: 11400000, guid: 6a82a81f7009fb74f9c00154813fd8d3, type: 2}
   sentences:
   - Hey Namu!
-  clips:
-  - {fileID: 8300000, guid: d617102f0067466459a5a73c418501e7, type: 3}
+  clips: []

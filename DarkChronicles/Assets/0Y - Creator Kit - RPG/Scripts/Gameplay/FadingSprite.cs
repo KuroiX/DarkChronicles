@@ -22,12 +22,14 @@ namespace RPGM.Gameplay
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            targetAlpha = 0.25f;
+            if(!other.CompareTag("Attack"))
+                targetAlpha = 0.25f;
         }
 
         void OnTriggerExit2D(Collider2D other)
         {
-            targetAlpha = 1f;
+            if (!other.CompareTag("Attack"))
+                targetAlpha = 1f;
         }
     }
 }
